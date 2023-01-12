@@ -2,7 +2,7 @@
 
 # File: tar-backup.sh
 # Version: 0.6
-# Updated: Thu 12 Jan 2023 16:45:18 IST
+# Updated: Thu 12 Jan 2023 20:15:17 IST
 
 # Create gzip tarball archive backup of specified directories and files.
 
@@ -101,7 +101,7 @@ create_output_dir
 cd $outputdir
 filename="$archive-$today.tar.gz"
 
-echo "Compressing..."
+printf "\nCompressing...\n"
 
 tar -C $inputdir -czf $filename .
 
@@ -112,6 +112,6 @@ printf "\nCreated $outputdir$filename\n"
 duration=$SECONDS
 hours=$(($duration / 3600))
 duration=$(($duration % 3600))
-minutes=$(($duration % 60))
+minutes=$(($duration / 60))
 seconds=$(($duration % 60))
 echo "Completed in $hours hour(s), $minutes minute(s), and $seconds second(s)."
