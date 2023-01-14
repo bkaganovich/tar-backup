@@ -57,3 +57,16 @@ Compressing...
 Created /path/to/backup/folder/my-project-2023.01.12.171530.tar.gz
 Completed in 0 hour(s), 0 minute(s), and 5 second(s).
 ```
+
+## Adding to `crontab` for automatic scheduling
+
+To schedule this script to run daily at 21:00 using `crontab`, you can follow these steps:
+
+1. Open the terminal and type `crontab -e` to open the editor.
+2. Add the following line:
+    ```bash
+    0 21 * * * /bin/bash /path/to/tar-backup.sh -a <archive-name> -i <input-directory> -o <output-directory>
+    ```
+    - Replace `<archive-name>`, `<input-directory>`, and `<output-directory>` with the appropriate values.
+    - Make sure to use the full path to the script file.
+3. Save and exit the editor.
