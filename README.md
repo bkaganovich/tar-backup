@@ -4,7 +4,7 @@ Last updated: `Thu 12 Jan 2023 20:15:17 IST`
 
 ## Description
 
-This bash script creates a gzip tarball archive backup of specified directories and files.
+This bash script creates a gzip tarball archive backup of specified directories and files, that can be scheduled automatically using `crontab` by running it as a command.
 
 ## Usage
 
@@ -43,7 +43,7 @@ Completed in 0 hour(s), 0 minute(s), and 5 second(s).
 ./tar-backup.sh
 ```
 
-In manual mode, the user is prompted to enter the path of the directory to backup, the name of the archive file, and the option to change the output directory. If not changing the output directory, the backup file will be saved in $HOME/backups/ by default.
+In manual mode, the user is prompted to enter the path of the directory to backup, the name of the archive file, and the option to change the output directory. If not changing the output directory, the backup file will be saved in `$HOME/backups/` by default.
 
 Example output:
 
